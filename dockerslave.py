@@ -25,7 +25,7 @@ class dockerslave():
             print "There is something wrong with Docker pull! Exit...!"
             sys.exit()
 
-    def start_container(self, command
+    def start_container(self, command):
         logger.info('Start to run container')
         run_result = subprocess.call(['docker', 'run', '-u', 'username', '-v', self.volume, self.image, '/bin/sh', '-c', command])
         if run_result == 0:
